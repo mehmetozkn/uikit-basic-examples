@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AllertMessage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5X-cO-aQ7">
+                                <rect key="frame" x="83" y="114" width="226" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kx5-L0-YtC">
+                                <rect key="frame" x="83" y="177" width="226" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2a-sl-MAr">
+                                <rect key="frame" x="83" y="235" width="226" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnN-Q4-Wvf">
+                                <rect key="frame" x="155" y="304" width="84" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vlc-sh-reO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E5X-cO-aQ7" firstAttribute="leading" secondItem="Kx5-L0-YtC" secondAttribute="leading" id="0gM-mO-Xhe"/>
+                            <constraint firstItem="E5X-cO-aQ7" firstAttribute="trailing" secondItem="Kx5-L0-YtC" secondAttribute="trailing" id="3YB-YX-rUz"/>
+                            <constraint firstItem="i2a-sl-MAr" firstAttribute="top" secondItem="Kx5-L0-YtC" secondAttribute="bottom" constant="24" id="4XG-nR-DqR"/>
+                            <constraint firstItem="Kx5-L0-YtC" firstAttribute="leading" secondItem="i2a-sl-MAr" secondAttribute="leading" id="IAW-g5-OgR"/>
+                            <constraint firstItem="E5X-cO-aQ7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="JRd-6D-27z"/>
+                            <constraint firstItem="Kx5-L0-YtC" firstAttribute="trailing" secondItem="i2a-sl-MAr" secondAttribute="trailing" id="Kw6-kA-B5h"/>
+                            <constraint firstItem="E5X-cO-aQ7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MyW-QB-yU7"/>
+                            <constraint firstItem="Kx5-L0-YtC" firstAttribute="top" secondItem="E5X-cO-aQ7" secondAttribute="bottom" constant="29" id="dsf-TX-yLS"/>
+                            <constraint firstItem="E5X-cO-aQ7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="uLY-gU-yr3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="i2a-sl-MAr" id="CGp-rn-6g5"/>
+                        <outlet property="emailTextField" destination="E5X-cO-aQ7" id="R0h-HZ-qsd"/>
+                        <outlet property="passwordTextField" destination="Kx5-L0-YtC" id="Z4C-u8-Nac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127.48091603053435" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
